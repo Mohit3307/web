@@ -6,60 +6,58 @@
   <title>EstateFinder - Find Your Dream Property</title>
   <style>
     /* General Styles */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
     }
-
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
-
     /* NavBar */
     .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       padding: 20px;
       background-color: #007BFF;
       color: white;
     }
-
 
     .logo {
       font-size: 24px;
       font-weight: bold;
     }
 
-
     .nav-links {
       list-style: none;
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
-
 
     .nav-links li a {
       color: white;
       font-weight: bold;
     }
 
-
     .user-actions {
       display: flex;
       gap: 10px;
+      flex-wrap: wrap;
     }
-
 
     .btn-login, .btn-post {
       padding: 10px 20px;
@@ -68,7 +66,6 @@
       color: #007BFF;
       font-weight: bold;
     }
-
 
     /* Hero Section */
     .hero {
@@ -81,21 +78,21 @@
       align-items: center;
       color: white;
       text-align: center;
+      padding: 20px;
     }
-
 
     .hero-content h1 {
       font-size: 48px;
       margin-bottom: 20px;
     }
 
-
     .search-bar {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-
 
     .search-bar input {
       padding: 10px;
@@ -103,7 +100,6 @@
       border: none;
       border-radius: 5px 0 0 5px;
     }
-
 
     .search-bar button {
       padding: 10px 20px;
@@ -114,12 +110,12 @@
       cursor: pointer;
     }
 
-
     .cta-buttons {
       display: flex;
-      gap: 10px;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-
 
     .btn-explore, .btn-list {
       padding: 10px 20px;
@@ -127,49 +123,41 @@
       background-color: #007BFF;
       color: white;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-
-    /* Featured Listings */
-    .featured-listings {
-      padding: 40px 20px;
-      text-align: center;
+    .btn-explore:hover, .btn-list:hover {
+      background-color: #0056b3;
     }
 
-
-    .listings-grid {
-      display: flex;
-      justify-content: center;
+    /* Section Grids */
+    .listings-grid,
+    .localities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      flex-wrap: wrap;
+      justify-items: center;
+      padding: 20px;
     }
 
-
-    .property-card {
-      width: 300px;
+    /* Cards */
+    .property-card,
+    .locality-card {
+      width: 100%;
+      max-width: 300px;
       border: 1px solid #ddd;
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
+      padding-bottom: 10px;
     }
 
-
-    .property-card img {
+    .property-card img,
+    .locality-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
-
-
-    .property-card h3 {
-      margin: 10px 0;
-    }
-
-
-    .property-card p {
-      margin: 5px 0;
-    }
-
 
     .btn-view {
       display: inline-block;
@@ -180,191 +168,12 @@
       margin: 10px 0;
     }
 
-
-    /* Popular Localities */
+    /* Sections */
+    .featured-listings,
     .popular-localities {
       padding: 40px 20px;
       text-align: center;
     }
-
-
-    .localities-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-
-    .locality-card {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-
-    .locality-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-
-    .locality-card h3 {
-      margin: 10px 0;
-    }
-
-
-    .locality-card p {
-      margin: 5px 0;
-    }
-
-
-    /* Services */
-    .services {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-
-    .services-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-
-    .service-card {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
-
-
-    .service-card img {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 10px;
-    }
-
-
-    .service-card h3 {
-      margin: 10px 0;
-    }
-
-
-    .service-card p {
-      margin: 5px 0;
-    }
-
-
-    .btn-learn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-
-
-    /* Testimonials */
-    .testimonials {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-
-    .testimonials-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-
-    .testimonial-card {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
-
-
-    .testimonial-card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-
-    .testimonial-card p {
-      margin: 10px 0;
-    }
-
-
-    .testimonial-card h4 {
-      margin: 5px 0;
-    }
-
-
-    /* Blog */
-    .blog {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-
-    .blog-grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-
-    .blog-card {
-      width: 300px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
-
-
-    .blog-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-
-    .blog-card h3 {
-      margin: 10px 0;
-    }
-
-
-    .blog-card p {
-      margin: 5px 0;
-    }
-
-
-    .btn-read {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-
 
     /* Footer */
     .footer {
@@ -373,47 +182,39 @@
       padding: 40px 20px;
     }
 
-
     .footer-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
     }
-
-
-    .footer-section {
-      width: 200px;
-    }
-
 
     .footer-section h3 {
       margin-bottom: 10px;
     }
-
 
     .footer-section ul {
       list-style: none;
       padding: 0;
     }
 
-
     .footer-section ul li {
       margin: 5px 0;
     }
 
-
     .social-icons {
       display: flex;
-      gap: 10px;
+      gap: 15px;
     }
-
 
     .social-icons img {
       width: 24px;
       height: 24px;
+      transition: transform 0.3s;
     }
 
+    .social-icons img:hover {
+      transform: scale(1.1);
+    }
 
     .footer-bottom {
       text-align: center;
@@ -421,15 +222,54 @@
       padding-top: 10px;
       border-top: 1px solid #555;
     }
+
+    /* Responsive Fixes */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .user-actions {
+        margin-top: 10px;
+      }
+
+      .hero-content h1 {
+        font-size: 32px;
+      }
+
+      .search-bar {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .search-bar input,
+      .search-bar button {
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- NavBar -->
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">EstateFinder</div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
-      <li><a href="#">Buy</a></li>
+      <li><a href="buy.html">Buy</a></li>
       <li><a href="#">Rent</a></li>
       <li><a href="#">Commercial</a></li>
       <li><a href="#">Projects</a></li>
@@ -441,7 +281,6 @@
       <a href="#" class="btn-post">Post Property</a>
     </div>
   </nav>
-
 
   <!-- Hero Section -->
   <section class="hero">
@@ -457,7 +296,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- Featured Listings -->
   <section class="featured-listings">
@@ -484,7 +322,6 @@
     </div>
   </section>
 
-
   <!-- Popular Localities -->
   <section class="popular-localities">
     <h2>Explore Popular Localities</h2>
@@ -510,71 +347,6 @@
     </div>
   </section>
 
-
-  <!-- Services -->
-  <section class="services">
-    <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="https://picsum.photos/100/100?random=7" alt="Home Loans">
-        <h3>Home Loans</h3>
-        <p>Get the best home loan rates.</p>
-        <a href="#" class="btn-learn">Learn More</a>
-      </div>
-      <div class="service-card">
-        <img src="https://picsum.photos/100/100?random=8" alt="Legal Assistance">
-        <h3>Legal Assistance</h3>
-        <p>Expert legal advice for property transactions.</p>
-        <a href="#" class="btn-learn">Learn More</a>
-      </div>
-      <div class="service-card">
-        <img src="https://picsum.photos/100/100?random=9" alt="Property Valuation">
-        <h3>Property Valuation</h3>
-        <p>Accurate property valuation services.</p>
-        <a href="#" class="btn-learn">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <img src="https://picsum.photos/80/80?random=10" alt="User 1">
-        <p>"EstateFinder helped me find my dream home quickly!"</p>
-        <h4>- John Doe</h4>
-      </div>
-      <div class="testimonial-card">
-        <img src="https://picsum.photos/80/80?random=11" alt="User 2">
-        <p>"Great service and support throughout the process."</p>
-        <h4>- Jane Smith</h4>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Blog -->
-  <section class="blog">
-    <h2>Real Estate Insights</h2>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <img src="https://picsum.photos/300/200?random=12" alt="Blog 1">
-        <h3>Top 5 Tips for First-Time Home Buyers</h3>
-        <p>Learn how to make the right decision.</p>
-        <a href="#" class="btn-read">Read More</a>
-      </div>
-      <div class="blog-card">
-        <img src="https://picsum.photos/300/200?random=13" alt="Blog 2">
-        <h3>How to Choose the Right Neighborhood</h3>
-        <p>Find the perfect location for your family.</p>
-        <a href="#" class="btn-read">Read More</a>
-      </div>
-    </div>
-  </section>
-
-
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
@@ -590,9 +362,9 @@
       <div class="footer-section">
         <h3>Follow Us</h3>
         <div class="social-icons">
-          <a href="#"><img src="https://picsum.photos/24/24?random=14" alt="Facebook"></a>
-          <a href="#"><img src="https://picsum.photos/24/24?random=15" alt="Twitter"></a>
-          <a href="#"><img src="https://picsum.photos/24/24?random=16" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
         </div>
       </div>
       <div class="footer-section">
@@ -604,9 +376,9 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2023 EstateFinder. All rights reserved.</p>
+      <p>© 2025 EstateFinder. All rights reserved.</p>
     </div>
   </footer>
+
 </body>
 </html>
-
