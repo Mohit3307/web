@@ -1,26 +1,27 @@
+<!-- Save this as rent.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EstateFinder - Rent Properties</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Optional: if you split CSS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EstateFinder - Rent</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Optional shared CSS -->
   <style>
-    /* (You can reuse your existing styles here or import your CSS file) */
+    /* Add your main shared styles here if needed, or use the inline CSS from your main home page */
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">EstateFinder</div>
+    <li><a href="index.html"><div class="logo">EstateFinder</div></a></li>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="buy.html">Buy</a></li>
-      <li><a href="#">Rent</a></li>
+      <li><a href="rent.html">Rent</a></li>
       <li><a href="#">Commercial</a></li>
       <li><a href="#">Projects</a></li>
-      <li><a href="#">Services</a></li>
+      <li><a href="services.html">Services</a></li>
       <li><a href="blog.html">Blog</a></li>
     </ul>
     <div class="user-actions">
@@ -29,67 +30,42 @@
     </div>
   </nav>
 
-  <!-- Hero Section for Rent -->
-  <section class="hero" style="background-image: url('https://img.staticmb.com/mbcontent/images/uploads/2022/11/House-on-rent.jpg');">
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');">
     <div class="hero-content">
-      <h1>Rent the Perfect Home</h1>
+      <h1>Find a Place to Rent</h1>
       <div class="search-bar">
-        <input type="text" placeholder="Search for city, area, or property type">
-        <button>Search Rentals</button>
+        <input type="text" placeholder="Search city, area, or landmark">
+        <button>Search</button>
       </div>
       <div class="cta-buttons">
         <a href="#" class="btn-explore">Browse Rentals</a>
-        <a href="#" class="btn-list">List for Rent</a>
+        <a href="#" class="btn-list">List Your Property</a>
       </div>
     </div>
   </section>
 
   <!-- Rental Listings -->
   <section class="featured-listings">
-    <h2>Top Rental Properties</h2>
+    <h2>Top Rental Listings</h2>
     <div class="listings-grid">
       <div class="property-card">
         <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="Rental 1">
-        <h3>2 BHK Apartment</h3>
-        <p>Bangalore, ₹25,000/mo</p>
+        <h3>1 BHK Studio Apartment</h3>
+        <p>Pune, ₹18,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://img.staticmb.com/mbcontent/images/uploads/2023/5/Property%20Rent%20Checklist.jpg" alt="Rental 2">
-        <h3>Studio Flat</h3>
-        <p>Pune, ₹15,000/mo</p>
+        <img src="https://cdn.pixabay.com/photo/2016/09/22/17/30/living-room-1682316_1280.jpg" alt="Rental 2">
+        <h3>2 BHK Flat</h3>
+        <p>Bangalore, ₹25,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://img.staticmb.com/mbcontent/images/uploads/2023/4/Ready-To-Move-In-Apartments.jpg" alt="Rental 3">
-        <h3>3 BHK Villa</h3>
-        <p>Hyderabad, ₹40,000/mo</p>
+        <img src="https://cdn.pixabay.com/photo/2017/06/13/22/42/architecture-2409512_1280.jpg" alt="Rental 3">
+        <h3>Furnished PG</h3>
+        <p>Delhi, ₹10,000/month</p>
         <a href="#" class="btn-view">View Details</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Popular Rental Areas -->
-  <section class="popular-localities">
-    <h2>Popular Areas for Rent</h2>
-    <div class="localities-grid">
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=10" alt="Locality 1">
-        <h3>Koramangala, Bangalore</h3>
-        <p>Avg. Rent: ₹30,000/mo</p>
-        <a href="#" class="btn-view">View Listings</a>
-      </div>
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=11" alt="Locality 2">
-        <h3>Powai, Mumbai</h3>
-        <p>Avg. Rent: ₹35,000/mo</p>
-        <a href="#" class="btn-view">View Listings</a>
-      </div>
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=12" alt="Locality 3">
-        <h3>South Delhi</h3>
-        <p>Avg. Rent: ₹45,000/mo</p>
-        <a href="#" class="btn-view">View Listings</a>
       </div>
     </div>
   </section>
@@ -129,4 +105,3 @@
 
 </body>
 </html>
-
