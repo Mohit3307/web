@@ -3,10 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EstateFinder - Rent a Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>EstateFinder - Rent Properties</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* Reuse your existing styles directly here or link to the CSS if separated */
+    /* You can move this to your main CSS file */
+    .rent-hero {
+      background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .rent-hero h1 {
+      font-size: 42px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+
+    .rental-listings {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .rental-listings h2 {
+      margin-bottom: 30px;
+    }
+
+    .listings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .property-card img {
+      height: 200px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -30,66 +70,31 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('https://www.homelane.com/blog/wp-content/uploads/2020/06/shutterstock_1027207694.jpg');">
-    <div class="hero-content">
-      <h1>Find the Perfect Rental Home</h1>
-      <div class="search-bar">
-        <input type="text" placeholder="Search by city, area or landmark" />
-        <button>Search</button>
-      </div>
-      <div class="cta-buttons">
-        <a href="#" class="btn-explore">Browse Rentals</a>
-        <a href="#" class="btn-list">List Your Rental</a>
-      </div>
-    </div>
+  <section class="rent-hero">
+    <h1>Browse Top Rental Properties</h1>
   </section>
 
   <!-- Rental Listings -->
-  <section class="featured-listings">
-    <h2>Featured Rentals</h2>
+  <section class="rental-listings">
+    <h2>Available for Rent</h2>
     <div class="listings-grid">
       <div class="property-card">
-        <img src="https://www.magicbricks.com/blog/wp-content/uploads/2021/06/Affordable-3BHK-Flats-in-Kolkata.jpg" alt="Rental 1">
-        <h3>2 BHK Apartment</h3>
+        <img src="https://images.unsplash.com/photo-1600585154200-994c7f7ad37b" alt="Rental 1">
+        <h3>1 BHK Apartment</h3>
         <p>Pune, ₹25,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://media.istockphoto.com/id/1328663894/photo/modern-residential-building-exterior.jpg?s=612x612&w=0&k=20&c=xNQX3Dw4-kC6FR16YXWzwBWapzwnAYZuDJKnhtInPWg=" alt="Rental 2">
-        <h3>1 BHK Studio</h3>
-        <p>Hyderabad, ₹15,000/month</p>
+        <img src="https://images.unsplash.com/photo-1600585153954-89f930af61c9" alt="Rental 2">
+        <h3>2 BHK Flat</h3>
+        <p>Chennai, ₹32,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://www.cascadebuildtech.com/wp-content/uploads/2022/09/3BHK-Flats-for-Rent-in-Kakkanad.jpg" alt="Rental 3">
-        <h3>3 BHK Flat</h3>
-        <p>Chennai, ₹30,000/month</p>
+        <img src="https://images.unsplash.com/photo-1600585154170-e3a1db6f01f3" alt="Rental 3">
+        <h3>Studio Apartment</h3>
+        <p>Hyderabad, ₹18,000/month</p>
         <a href="#" class="btn-view">View Details</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Popular Rental Areas -->
-  <section class="popular-localities">
-    <h2>Top Rental Localities</h2>
-    <div class="localities-grid">
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=7" alt="Locality 1">
-        <h3>Wakad, Pune</h3>
-        <p>Avg. Rent: ₹22,000/month</p>
-        <a href="#" class="btn-view">View Listings</a>
-      </div>
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=8" alt="Locality 2">
-        <h3>Gachibowli, Hyderabad</h3>
-        <p>Avg. Rent: ₹18,000/month</p>
-        <a href="#" class="btn-view">View Listings</a>
-      </div>
-      <div class="locality-card">
-        <img src="https://picsum.photos/300/200?random=9" alt="Locality 3">
-        <h3>Koramangala, Bangalore</h3>
-        <p>Avg. Rent: ₹28,000/month</p>
-        <a href="#" class="btn-view">View Listings</a>
       </div>
     </div>
   </section>
@@ -117,7 +122,7 @@
       <div class="footer-section">
         <h3>Subscribe to Our Newsletter</h3>
         <form>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter your email">
           <button type="submit">Subscribe</button>
         </form>
       </div>
