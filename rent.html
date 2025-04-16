@@ -1,20 +1,19 @@
-<!-- Save this as rent.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EstateFinder - Rent</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Optional shared CSS -->
+  <title>EstateFinder - Rent a Home</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    /* Add your main shared styles here if needed, or use the inline CSS from your main home page */
+    /* Reuse your existing styles directly here or link to the CSS if separated */
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-  <div class="logo">EstateFinder</div>
+    <div class="logo">EstateFinder</div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="buy.html">Buy</a></li>
@@ -31,41 +30,66 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994');">
+  <section class="hero" style="background-image: url('https://www.homelane.com/blog/wp-content/uploads/2020/06/shutterstock_1027207694.jpg');">
     <div class="hero-content">
-      <h1>Find a Place to Rent</h1>
+      <h1>Find the Perfect Rental Home</h1>
       <div class="search-bar">
-        <input type="text" placeholder="Search city, area, or landmark">
+        <input type="text" placeholder="Search by city, area or landmark" />
         <button>Search</button>
       </div>
       <div class="cta-buttons">
         <a href="#" class="btn-explore">Browse Rentals</a>
-        <a href="#" class="btn-list">List Your Property</a>
+        <a href="#" class="btn-list">List Your Rental</a>
       </div>
     </div>
   </section>
 
   <!-- Rental Listings -->
   <section class="featured-listings">
-    <h2>Top Rental Listings</h2>
+    <h2>Featured Rentals</h2>
     <div class="listings-grid">
       <div class="property-card">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="Rental 1">
-        <h3>1 BHK Studio Apartment</h3>
-        <p>Pune, ₹18,000/month</p>
+        <img src="https://www.magicbricks.com/blog/wp-content/uploads/2021/06/Affordable-3BHK-Flats-in-Kolkata.jpg" alt="Rental 1">
+        <h3>2 BHK Apartment</h3>
+        <p>Pune, ₹25,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://cdn.pixabay.com/photo/2016/09/22/17/30/living-room-1682316_1280.jpg" alt="Rental 2">
-        <h3>2 BHK Flat</h3>
-        <p>Bangalore, ₹25,000/month</p>
+        <img src="https://media.istockphoto.com/id/1328663894/photo/modern-residential-building-exterior.jpg?s=612x612&w=0&k=20&c=xNQX3Dw4-kC6FR16YXWzwBWapzwnAYZuDJKnhtInPWg=" alt="Rental 2">
+        <h3>1 BHK Studio</h3>
+        <p>Hyderabad, ₹15,000/month</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://cdn.pixabay.com/photo/2017/06/13/22/42/architecture-2409512_1280.jpg" alt="Rental 3">
-        <h3>Furnished PG</h3>
-        <p>Delhi, ₹10,000/month</p>
+        <img src="https://www.cascadebuildtech.com/wp-content/uploads/2022/09/3BHK-Flats-for-Rent-in-Kakkanad.jpg" alt="Rental 3">
+        <h3>3 BHK Flat</h3>
+        <p>Chennai, ₹30,000/month</p>
         <a href="#" class="btn-view">View Details</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Rental Areas -->
+  <section class="popular-localities">
+    <h2>Top Rental Localities</h2>
+    <div class="localities-grid">
+      <div class="locality-card">
+        <img src="https://picsum.photos/300/200?random=7" alt="Locality 1">
+        <h3>Wakad, Pune</h3>
+        <p>Avg. Rent: ₹22,000/month</p>
+        <a href="#" class="btn-view">View Listings</a>
+      </div>
+      <div class="locality-card">
+        <img src="https://picsum.photos/300/200?random=8" alt="Locality 2">
+        <h3>Gachibowli, Hyderabad</h3>
+        <p>Avg. Rent: ₹18,000/month</p>
+        <a href="#" class="btn-view">View Listings</a>
+      </div>
+      <div class="locality-card">
+        <img src="https://picsum.photos/300/200?random=9" alt="Locality 3">
+        <h3>Koramangala, Bangalore</h3>
+        <p>Avg. Rent: ₹28,000/month</p>
+        <a href="#" class="btn-view">View Listings</a>
       </div>
     </div>
   </section>
@@ -93,7 +117,7 @@
       <div class="footer-section">
         <h3>Subscribe to Our Newsletter</h3>
         <form>
-          <input type="email" placeholder="Enter your email">
+          <input type="email" placeholder="Enter your email" />
           <button type="submit">Subscribe</button>
         </form>
       </div>
