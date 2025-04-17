@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Property - EstateFinder</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #007BFF;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Post Your Property</h2>
+    <form>
+      <label>Property Title</label>
+      <input type="text" placeholder="e.g., Spacious 2BHK Apartment" required>
+
+      <label>Location</label>
+      <input type="text" placeholder="e.g., Andheri, Mumbai" required>
+
+      <label>Price</label>
+      <input type="number" placeholder="e.g., 12000000" required>
+
+      <label>Property Type</label>
+      <select required>
+        <option value="">Select Type</option>
+        <option>Apartment</option>
+        <option>Villa</option>
+        <option>Independent House</option>
+        <option>Plot</option>
+      </select>
+
+      <label>Description</label>
+      <textarea rows="5" placeholder="Write about the property" required></textarea>
+
+      <label>Upload Image</label>
+      <input type="file" accept="image/*">
+
+      <button type="submit">Submit Property</button>
+    </form>
+  </div>
+
+</body>
+</html>
