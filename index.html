@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EstateFinder - Find Your Dream Property</title>
   <style>
-    /* General Styles */
     * {
       box-sizing: border-box;
     }
@@ -16,7 +15,7 @@
       padding: 0;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3 {
       margin: 0;
     }
 
@@ -25,7 +24,6 @@
       color: inherit;
     }
 
-    /* NavBar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -67,7 +65,6 @@
       font-weight: bold;
     }
 
-    /* Hero Section */
     .hero {
       background-image: url('https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2024/01/17131521/first-home-buyer-advice-inspiration.jpg');
       background-size: cover;
@@ -84,30 +81,6 @@
     .hero-content h1 {
       font-size: 48px;
       margin-bottom: 20px;
-    }
-
-    .search-bar {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .search-bar input {
-      padding: 10px;
-      width: 300px;
-      border: none;
-      border-radius: 5px 0 0 5px;
-    }
-
-    .search-bar button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 0 5px 5px 0;
-      cursor: pointer;
     }
 
     .cta-buttons {
@@ -130,9 +103,7 @@
       background-color: #0056b3;
     }
 
-    /* Section Grids */
-    .listings-grid,
-    .localities-grid {
+    .listings-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
@@ -140,9 +111,7 @@
       padding: 20px;
     }
 
-    /* Cards */
-    .property-card,
-    .locality-card {
+    .property-card {
       width: 100%;
       max-width: 300px;
       border: 1px solid #ddd;
@@ -152,8 +121,7 @@
       padding-bottom: 10px;
     }
 
-    .property-card img,
-    .locality-card img {
+    .property-card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
@@ -168,14 +136,16 @@
       margin: 10px 0;
     }
 
-    /* Sections */
-    .featured-listings,
-    .popular-localities {
+    .featured-listings {
       padding: 40px 20px;
       text-align: center;
     }
 
-    /* Footer */
+    .explore-more {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
     .footer {
       background-color: #333;
       color: white;
@@ -223,7 +193,6 @@
       border-top: 1px solid #555;
     }
 
-    /* Responsive Fixes */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -244,17 +213,6 @@
         font-size: 32px;
       }
 
-      .search-bar {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .search-bar input,
-      .search-bar button {
-        width: 100%;
-        border-radius: 5px;
-      }
-
       .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -265,31 +223,25 @@
 <body>
 
   <!-- Navbar -->
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">EstateFinder</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="buy.html">Buy</a></li>
-    <li><a href="rent.html">Rent</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="blog.html">Blog</a></li>
-  </ul>
-  <div class="user-actions">
-    <a href="#" class="btn-login">Login</a>
-    <a href="#" class="btn-post">Post Property</a>
-  </div>
-</nav>
-
+  <nav class="navbar">
+    <div class="logo">EstateFinder</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="buy.html">Buy</a></li>
+      <li><a href="rent.html">Rent</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <div class="user-actions">
+      <a href="#" class="btn-login">Login</a>
+      <a href="#" class="btn-post">Post Property</a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1>Find Your Dream Property Today</h1>
-      <div class="search-bar">
-        <input type="text" placeholder="Enter location, city, or area">
-        <button>Search</button>
-      </div>
       <div class="cta-buttons">
         <a href="#" class="btn-explore">Explore Properties</a>
         <a href="#" class="btn-list">List Your Property</a>
@@ -308,9 +260,9 @@
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/456081797.jpg?k=80a2a544765b1338ec90739c9ba44f009e3cc9758ed04f007a46d52f4d114c56&o=" alt="Property 2">
-        <h3>2 BHK Flat</h3>
-        <p>Bangalore, ₹90 Lakhs</p>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLO_I9s4ei9hOwKS70Vlf-WY6YTgdjqBxO2A&s" alt="Property 2">
+        <h3>3 BHK Villa</h3>
+        <p>Bangalore, ₹2.5 Cr</p>
         <a href="#" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
@@ -322,23 +274,18 @@
     </div>
   </section>
 
- <!-- Replace this section -->
-<!-- Popular Localities -->
-<!-- (This part has been removed) -->
-
-<!-- New Explore More Section -->
-<section class="explore-more">
-  <h2 style="text-align: center; padding: 40px 20px 20px;">Explore More Properties</h2>
-  <div class="listings-grid">
-    <div class="property-card">
-      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="Explore Property">
-      <h3></h3>
-      <p>Pune, ₹2.2 Cr</p>
-      <a href="#" class="btn-view">View Details</a>
+  <!-- Explore More Section -->
+  <section class="explore-more">
+    <h2>Explore More Properties</h2>
+    <div class="listings-grid">
+      <div class="property-card">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="Explore Property">
+        <h3>3 BHK House</h3>
+        <p>Pune, ₹2.2 Cr</p>
+        <a href="#" class="btn-view">View Details</a>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
