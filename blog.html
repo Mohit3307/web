@@ -67,35 +67,16 @@
       font-weight: bold;
     }
 
-    /* Hero Section */
-    .blog-hero {
-      background-image: url('https://images.unsplash.com/photo-1581091870622-2d974b6a9c63');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .blog-hero h1 {
-      font-size: 42px;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 15px 30px;
-      border-radius: 10px;
-    }
-
     /* Blog Section */
     .blog-section {
-      padding: 40px 20px;
+      padding: 60px 20px 40px;
       text-align: center;
     }
 
     .blog-section h2 {
       margin-bottom: 30px;
+      font-size: 32px;
+      color: #333;
     }
 
     .blog-grid {
@@ -213,10 +194,6 @@
         margin-top: 10px;
       }
 
-      .blog-hero h1 {
-        font-size: 28px;
-      }
-
       .blog-grid {
         grid-template-columns: 1fr;
       }
@@ -225,7 +202,6 @@
 </head>
 <body>
 
-  <!-- Navbar -->
 <!-- Navbar -->
 <nav class="navbar">
   <div class="logo">EstateFinder</div>
@@ -242,77 +218,71 @@
   </div>
 </nav>
 
-
-  <!-- Hero Section -->
-  <section class="blog-hero">
-    <h1>Estate Insights & Property Tips</h1>
-  </section>
-
-  <!-- Blog Section -->
-  <section class="blog-section">
-    <h2>Latest Blog Posts</h2>
-    <div class="blog-grid">
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1598928506311-c55dedab3c34" alt="Blog 1">
-        <div class="blog-card-content">
-          <h3>Tips for First-Time Home Buyers</h3>
-          <p>Navigate the property market like a pro with our step-by-step guide for first-timers.</p>
-        </div>
-        <a href="#" class="btn-view">Read More</a>
+<!-- Blog Section -->
+<section class="blog-section">
+  <h2>Latest Blog Posts</h2>
+  <div class="blog-grid">
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="First-Time Home Buyers">
+      <div class="blog-card-content">
+        <h3>Tips for First-Time Home Buyers</h3>
+        <p>Navigate the property market like a pro with our step-by-step guide for first-timers.</p>
       </div>
+      <a href="#" class="btn-view">Read More</a>
+    </div>
 
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1600585153040-e0b2f9e5c2e8" alt="Blog 2">
-        <div class="blog-card-content">
-          <h3>Top Rental Areas in 2025</h3>
-          <p>Explore the most in-demand rental hotspots in major Indian cities this year.</p>
-        </div>
-        <a href="#" class="btn-view">Read More</a>
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1600585153891-6c1e6f34fa0b" alt="Top Rental Areas">
+      <div class="blog-card-content">
+        <h3>Top Rental Areas in 2025</h3>
+        <p>Explore the most in-demand rental hotspots in major Indian cities this year.</p>
       </div>
+      <a href="#" class="btn-view">Read More</a>
+    </div>
 
-      <div class="blog-card">
-        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267" alt="Blog 3">
-        <div class="blog-card-content">
-          <h3>Home Staging Ideas That Work</h3>
-          <p>Attract more buyers by making your home look irresistible with these pro tips.</p>
-        </div>
-        <a href="#" class="btn-view">Read More</a>
+    <div class="blog-card">
+      <img src="https://images.unsplash.com/photo-1588854337236-6881d5f3c59e" alt="Home Staging">
+      <div class="blog-card-content">
+        <h3>Home Staging Ideas That Work</h3>
+        <p>Attract more buyers by making your home look irresistible with these pro tips.</p>
+      </div>
+      <a href="#" class="btn-view">Read More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form>
-          <input type="email" placeholder="Enter your email">
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
+    <div class="footer-section">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 EstateFinder. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 EstateFinder. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
