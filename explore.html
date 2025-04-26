@@ -5,207 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Explore Properties - EstateFinder</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f8f9fa;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background-color: #007BFF;
-      color: white;
-    }
-
-    .navbar .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    .navbar ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .explore-container {
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 40px;
-    }
-
-    .property-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .property-card {
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding-bottom: 20px;
-    }
-
-    .property-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .property-card h3 {
-      margin: 15px;
-      font-size: 20px;
-      color: #007BFF;
-    }
-
-    .property-card p {
-      margin: 0 15px 10px;
-      color: #555;
-    }
-
-    .property-card ul {
-      margin: 10px 15px;
-      padding-left: 20px;
-      color: #555;
-    }
-
-    .btn-buy {
-      display: block;
-      margin: 15px auto 0;
-      padding: 10px 20px;
-      background-color: #28a745;
-      color: white;
-      border-radius: 5px;
-      text-align: center;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn-buy:hover {
-      background-color: #218838;
+    /* Same CSS as index.html (copied exactly) */
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    h1, h2, h3 { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px; background-color: #007BFF; color: white; }
+    .logo { font-size: 24px; font-weight: bold; }
+    .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links li a { color: white; font-weight: bold; }
+    .user-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-login, .btn-post { padding: 10px 20px; border-radius: 5px; background-color: white; color: #007BFF; font-weight: bold; }
+    .explore-container { padding: 40px 20px; }
+    h1 { text-align: center; color: #333; margin-bottom: 40px; }
+    .property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; justify-items: center; }
+    .property-card { width: 100%; max-width: 300px; background-color: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); text-align: center; padding-bottom: 10px; }
+    .property-card img { width: 100%; height: 200px; object-fit: cover; }
+    .property-card h3 { margin: 15px; font-size: 20px; color: #007BFF; }
+    .property-card p { margin: 0 15px 10px; color: #555; }
+    .property-card ul { margin: 10px 15px; padding-left: 20px; color: #555; text-align: left; }
+    .btn-buy { display: inline-block; margin: 10px auto; padding: 10px 20px; background-color: #28a745; color: white; border-radius: 5px; font-weight: bold; transition: background-color 0.3s; }
+    .btn-buy:hover { background-color: #218838; }
+    .footer { background-color: #333; color: white; padding: 40px 20px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-section h3 { margin-bottom: 10px; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li { margin: 5px 0; }
+    .social-icons { display: flex; gap: 15px; }
+    .social-icons img { width: 24px; height: 24px; transition: transform 0.3s; }
+    .social-icons img:hover { transform: scale(1.1); }
+    .footer-bottom { text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #555; }
+    @media (max-width: 768px) {
+      .navbar { flex-direction: column; align-items: flex-start; }
+      .nav-links { flex-direction: column; gap: 10px; margin-top: 10px; }
+      .user-actions { margin-top: 10px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-   <nav class="navbar">
-    <div class="logo">EstateFinder</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="buy.html">Buy</a></li>
-      <li><a href="rent.html">Rent</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-    <div class="user-actions">
-      <a href="login.html" class="btn-login">Login</a>
-      <a href="post_property.html" class="btn-post">Post Property</a>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">EstateFinder</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="buy.html">Buy</a></li>
+    <li><a href="rent.html">Rent</a></li>
+    <li><a href="services.html">services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="user-actions">
+    <a href="login.html" class="btn-login">Login</a>
+    <a href="post_property.html" class="btn-post">Post Property</a>
+  </div>
+</nav>
+
+<!-- Explore Properties -->
+<div class="explore-container">
+  <h1>Explore Properties</h1>
+  <div class="property-grid">
+
+    <!-- Property 1 -->
+    <div class="property-card">
+      <img src="https://dressyourhome.in/wp-content/uploads/IMG-3220.jpg" alt="2 BHK Apartment">
+      <h3>2 BHK Apartment - ₹1.2 Cr</h3>
+      <p>Mumbai</p>
+      <ul>
+        <li>Fully Furnished</li>
+        <li>Near metro station</li>
+        <li>Gym, Pool, and Parking included</li>
+      </ul>
+      <a href="property_detail_1.html" class="btn-buy">Buy Now</a>
     </div>
-  </nav>
 
-  <!-- Explore Properties -->
-  <div class="explore-container">
-    <h1>Explore Properties</h1>
-    <div class="property-grid">
+    <!-- Property 2 -->
+    <div class="property-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLO_I9s4ei9hOwKS70Vlf-WY6YTgdjqBxO2A&s" alt="3 BHK Villa">
+      <h3>3 BHK Villa - ₹2.5 Cr</h3>
+      <p>Bangalore</p>
+      <ul>
+        <li>Private garden and garage</li>
+        <li>Gated community</li>
+        <li>Solar-powered home</li>
+      </ul>
+      <a href="property_detail_2.html" class="btn-buy">Book Now</a>
+    </div>
 
-      <!-- Property 1 -->
-      <div class="property-card">
-        <img src="https://dressyourhome.in/wp-content/uploads/IMG-3220.jpg" alt="2 BHK Apartment">
-        <h3>2 BHK Apartment - ₹1.2 Cr</h3>
-        <p>Mumbai</p>
-        <ul>
-          <li>Fully Furnished</li>
-          <li>Near metro station</li>
-          <li>Gym, Pool, and Parking included</li>
-        </ul>
-        <a href="#" class="btn-buy">Buy Now</a>
+    <!-- Property 3 -->
+    <div class="property-card">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg" alt="3 BHK House">
+      <h3>3 BHK House - ₹3 Cr</h3>
+      <p>Delhi</p>
+      <ul>
+        <li>Spacious 3-floor layout</li>
+        <li>Modular kitchen</li>
+        <li>Near schools and markets</li>
+      </ul>
+      <a href="property_detail_3.html" class="btn-buy">Buy Now</a>
+    </div>
+
+    <!-- Property 4 -->
+    <div class="property-card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury Condo">
+      <h3>Luxury Condo - ₹4.2 Cr</h3>
+      <p>Pune</p>
+      <ul>
+        <li>River view balcony</li>
+        <li>Smart home system</li>
+        <li>Premium furnishings</li>
+      </ul>
+      <a href="property_detail_4.html" class="btn-buy">Book Now</a>
+    </div>
+
+    <!-- Property 5 -->
+    <div class="property-card">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Studio Apartment">
+      <h3>Studio Apartment - ₹80 Lakh</h3>
+      <p>Ahmedabad</p>
+      <ul>
+        <li>Perfect for singles/couples</li>
+        <li>24x7 security</li>
+        <li>Proximity to IT parks</li>
+      </ul>
+      <a href="property_detail_5.html" class="btn-buy">Buy Now</a>
+    </div>
+
+    <!-- Property 6 -->
+    <div class="property-card">
+      <img src="https://images.unsplash.com/photo-1605276375003-3e53cee95d59" alt="Penthouse">
+      <h3>Penthouse - ₹5.5 Cr</h3>
+      <p>Hyderabad</p>
+      <ul>
+        <li>Rooftop pool</li>
+        <li>360-degree city view</li>
+        <li>4 Bedrooms + Office</li>
+      </ul>
+      <a href="property_detail_6.html" class="btn-buy">Book Now</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
       </div>
-
-      <!-- Property 2 -->
-      <div class="property-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLO_I9s4ei9hOwKS70Vlf-WY6YTgdjqBxO2A&s" alt="3 BHK Villa">
-        <h3>3 BHK Villa - ₹2.5 Cr</h3>
-        <p>Bangalore</p>
-        <ul>
-          <li>Private garden and garage</li>
-          <li>Gated community</li>
-          <li>Solar-powered home</li>
-        </ul>
-        <a href="#" class="btn-buy">Book Now</a>
-      </div>
-
-      <!-- Property 3 -->
-      <div class="property-card">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="3 BHK House">
-        <h3>3 BHK House - ₹3 Cr</h3>
-        <p>Delhi</p>
-        <ul>
-          <li>Spacious 3-floor layout</li>
-          <li>Modular kitchen</li>
-          <li>Near schools and markets</li>
-        </ul>
-        <a href="#" class="btn-buy">Buy Now</a>
-      </div>
-
-      <!-- Property 4 -->
-      <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Luxury Condo">
-        <h3>Luxury Condo - ₹4.2 Cr</h3>
-        <p>Pune</p>
-        <ul>
-          <li>River view balcony</li>
-          <li>Smart home system</li>
-          <li>Premium furnishings</li>
-        </ul>
-        <a href="#" class="btn-buy">Book Now</a>
-      </div>
-
-      <!-- Property 5 -->
-      <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Studio Apartment">
-        <h3>Studio Apartment - ₹80 Lakh</h3>
-        <p>Ahmedabad</p>
-        <ul>
-          <li>Perfect for singles/couples</li>
-          <li>24x7 security</li>
-          <li>Proximity to IT parks</li>
-        </ul>
-        <a href="#" class="btn-buy">Buy Now</a>
-      </div>
-
-      <!-- Property 6 -->
-      <div class="property-card">
-        <img src="https://images.unsplash.com/photo-1605276375003-3e53cee95d59" alt="Penthouse">
-        <h3>Penthouse - ₹5.5 Cr</h3>
-        <p>Hyderabad</p>
-        <ul>
-          <li>Rooftop pool</li>
-          <li>360-degree city view</li>
-          <li>4 Bedrooms + Office</li>
-        </ul>
-        <a href="#" class="btn-buy">Book Now</a>
-      </div>
-
+    </div>
+    <div class="footer-section">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>© 2025 EstateFinder. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
