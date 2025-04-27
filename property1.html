@@ -75,6 +75,27 @@
       background-color: #0056b3;
     }
 
+    /* Contact Form */
+    #contact-seller {
+      padding: 40px 20px;
+      background: #ffffff;
+      text-align: center;
+    }
+
+    #contact-seller form {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+    }
+
+    #contact-seller input, #contact-seller textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
     .footer { background-color: #333; color: white; padding: 40px 20px; margin-top: 40px; }
     .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
     .footer-section h3 { margin-bottom: 10px; }
@@ -129,7 +150,23 @@
   </div>
 
   <a href="#contact-seller" class="btn-contact">Contact Seller</a>
+</div>
 
+<!-- Contact Seller Form -->
+<div id="contact-seller">
+  <h2>Send a Message to the Seller</h2>
+  <form action="send_message.php" method="POST">
+    <label for="name">Your Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Your Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required></textarea><br>
+
+    <button type="submit" class="btn-contact">Send Message</button>
+  </form>
 </div>
 
 <!-- Footer -->
@@ -162,26 +199,7 @@
   </div>
   <div class="footer-bottom">
     <p>© 2025 EstateFinder. All rights reserved.</p>
-    
   </div>
-
-  <!-- Contact Form Section -->
-<div id="contact-seller" style="padding: 40px 20px; background: #ffffff; text-align: center;">
-  <h2>Send a Message to the Seller</h2>
-  <form action="send_message.php" method="POST" style="max-width: 600px; margin: 20px auto; text-align: left;">
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-
-    <label for="email">Your Email:</label><br>
-    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px;"></textarea><br>
-
-    <button type="submit" class="btn-contact">Send Message</button>
-  </form>
-</div>
-
 </footer>
 
 </body>
