@@ -13,6 +13,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f8f9fa;
     }
 
     h1, h2, h3 {
@@ -44,11 +45,14 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
     }
 
     .nav-links li a {
       color: white;
       font-weight: bold;
+      padding: 5px 0;
     }
 
     .user-actions {
@@ -63,62 +67,102 @@
       background-color: white;
       color: #007BFF;
       font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-login:hover, .btn-post:hover {
+      background-color: #e6e6e6;
     }
 
     .hero {
-      background-image: url('https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2024/01/17131521/first-home-buyer-advice-inspiration.jpg');
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                  url('https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2024/01/17131521/first-home-buyer-advice-inspiration.jpg');
       background-size: cover;
       background-position: center;
       height: 500px;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       color: white;
       text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
       padding: 20px;
     }
 
     .hero-content h1 {
       font-size: 48px;
       margin-bottom: 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     .cta-buttons {
       display: flex;
+      gap: 20px;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
     }
 
     .btn-explore, .btn-list {
-      padding: 10px 20px;
+      padding: 15px 30px;
       border-radius: 5px;
-      background-color: #007BFF;
-      color: white;
       font-weight: bold;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
     }
 
-    .btn-explore:hover, .btn-list:hover {
+    .btn-explore {
+      background-color: #007BFF;
+      color: white;
+      border: 2px solid #007BFF;
+    }
+
+    .btn-explore:hover {
       background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    .btn-list {
+      background-color: white;
+      color: #007BFF;
+      border: 2px solid white;
+    }
+
+    .btn-list:hover {
+      background-color: #f0f0f0;
+      border-color: #f0f0f0;
+    }
+
+    .featured-listings {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .featured-listings h2 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #333;
     }
 
     .listings-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      justify-items: center;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .property-card {
-      width: 100%;
-      max-width: 300px;
-      border: 1px solid #ddd;
+      background: white;
       border-radius: 10px;
       overflow: hidden;
-      text-align: center;
-      padding-bottom: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .property-card:hover {
+      transform: translateY(-5px);
     }
 
     .property-card img {
@@ -127,23 +171,30 @@
       object-fit: cover;
     }
 
+    .property-card h3 {
+      margin: 15px;
+      font-size: 20px;
+      color: #007BFF;
+    }
+
+    .property-card p {
+      margin: 0 15px 15px;
+      color: #555;
+    }
+
     .btn-view {
       display: inline-block;
+      margin: 0 15px 15px;
       padding: 10px 20px;
       background-color: #007BFF;
       color: white;
       border-radius: 5px;
-      margin: 10px 0;
+      font-weight: bold;
+      transition: background-color 0.3s;
     }
 
-    .featured-listings {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .explore-more {
-      padding: 40px 20px;
-      text-align: center;
+    .btn-view:hover {
+      background-color: #0056b3;
     }
 
     .footer {
@@ -156,10 +207,13 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .footer-section h3 {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
     }
 
     .footer-section ul {
@@ -168,12 +222,24 @@
     }
 
     .footer-section ul li {
-      margin: 5px 0;
+      margin: 10px 0;
+    }
+
+    .footer-section ul li a {
+      transition: color 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: #007BFF;
     }
 
     .social-icons {
       display: flex;
       gap: 15px;
+    }
+
+    .social-icons a {
+      display: inline-block;
     }
 
     .social-icons img {
@@ -183,13 +249,13 @@
     }
 
     .social-icons img:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
 
     .footer-bottom {
       text-align: center;
-      margin-top: 20px;
-      padding-top: 10px;
+      margin-top: 40px;
+      padding-top: 20px;
       border-top: 1px solid #555;
     }
 
@@ -216,6 +282,11 @@
       .cta-buttons {
         flex-direction: column;
         align-items: center;
+      }
+
+      .btn-explore, .btn-list {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -254,19 +325,19 @@
     <h2>Featured Properties</h2>
     <div class="listings-grid">
       <div class="property-card">
-        <img src="https://dressyourhome.in/wp-content/uploads/IMG-3220.jpg" alt="Property 1">
+        <img src="https://dressyourhome.in/wp-content/uploads/IMG-3220.jpg" alt="2 BHK Apartment in Mumbai">
         <h3>2 BHK Apartment</h3>
         <p>Mumbai, ₹1.2 Cr</p>
         <a href="property1.html" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/456081797.jpg?k=80a2a544765b1338ec90739c9ba44f009e3cc9758ed04f007a46d52f4d114c56&o=" alt="Property 2">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/456081797.jpg?k=80a2a544765b1338ec90739c9ba44f009e3cc9758ed04f007a46d52f4d114c56&o=" alt="2 BHK Flat in Bangalore">
         <h3>2 BHK Flat</h3>
         <p>Bangalore, ₹90 Lakhs</p>
         <a href="property2.html" class="btn-view">View Details</a>
       </div>
       <div class="property-card">
-        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="Property 3">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/555071355.jpg?k=3e1238b8174e87f5a4bc5a4641dbbf34fdd2f010e4ba973d609324dafaab95f5&o=&hp=1" alt="3 BHK House in Delhi">
         <h3>3 BHK House</h3>
         <p>Delhi, ₹3 Cr</p>
         <a href="property3.html" class="btn-view">View Details</a>
@@ -280,10 +351,10 @@
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact_seller.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -296,8 +367,8 @@
       </div>
       <div class="footer-section">
         <h3>Subscribe to Our Newsletter</h3>
-        <form>
-          <input type="email" placeholder="Enter your email">
+        <form action="#" method="post">
+          <input type="email" name="email" placeholder="Enter your email" required>
           <button type="submit">Subscribe</button>
         </form>
       </div>
