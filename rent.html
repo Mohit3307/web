@@ -27,15 +27,49 @@
       color: inherit;
     }
 
-    /* NavBar (unchanged as requested) */
-    .navbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px; background-color: #007BFF; color: white; }
-    .logo { font-size: 24px; font-weight: bold; }
-    .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
-    .nav-links li a { color: white; font-weight: bold; }
-    .user-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn-login, .btn-post { padding: 10px 20px; border-radius: 5px; background-color: white; color: #007BFF; font-weight: bold; }
+    /* NavBar - Matched exactly to blog.html */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #007BFF;
+      color: white;
+    }
 
-    /* Hero Section - Improved */
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links li a {
+      color: white;
+      font-weight: bold;
+    }
+
+    .user-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn-login, .btn-post {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: white;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
     .rent-hero {
       background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
       background-size: cover;
@@ -66,10 +100,11 @@
       z-index: 1;
       padding: 15px 30px;
       border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
       text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    /* Listings Grid - Improved */
+    /* Listings Grid */
     .rental-listings {
       padding: 60px 20px;
       text-align: center;
@@ -141,7 +176,7 @@
       background-color: #0056b3;
     }
 
-    /* Footer (unchanged as requested) */
+    /* Footer - Matched exactly to blog.html */
     .footer {
       background-color: #333;
       color: white;
@@ -189,7 +224,7 @@
       border-top: 1px solid #555;
     }
 
-    /* Responsive Improvements */
+    /* Responsive - Matched to blog.html */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
@@ -208,11 +243,6 @@
 
       .rent-hero h1 {
         font-size: 28px;
-        padding: 10px 20px;
-      }
-
-      .rental-listings {
-        padding: 40px 15px;
       }
     }
 
@@ -223,14 +253,13 @@
       
       .rental-listings h2 {
         font-size: 28px;
-        margin-bottom: 30px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar (unchanged) -->
+  <!-- Navbar - Exactly matches blog.html -->
   <nav class="navbar">
     <div class="logo">EstateFinder</div>
     <ul class="nav-links">
@@ -282,16 +311,16 @@
     </div>
   </section>
 
-  <!-- Footer (unchanged) -->
+  <!-- Footer - Exactly matches blog.html -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contactus.html">Contact Us</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
         </ul>
       </div>
       <div class="footer-section">
