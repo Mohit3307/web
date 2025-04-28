@@ -1,302 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EstateFinder - Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - EstateFinder</title>
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; }
+    h1, h2, h3 { margin: 0; }
+    a { text-decoration: none; color: inherit; }
+    .navbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 20px; background-color: #007BFF; color: white; }
+    .logo { font-size: 24px; font-weight: bold; }
+    .nav-links { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links li a { color: white; font-weight: bold; }
+    .user-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-login, .btn-post { padding: 10px 20px; border-radius: 5px; background-color: white; color: #007BFF; font-weight: bold; }
+    
+    .services-container {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    h1, h2, h3 {
-      margin: 0;
-    }
-
-    /* Navbar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
-      background-color: #007BFF;
-      color: white;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links li a {
-      color: white;
-      font-weight: bold;
-    }
-
-    .user-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .btn-login, .btn-post {
-      padding: 10px 20px;
-      border-radius: 5px;
-      background-color: white;
-      color: #007BFF;
-      font-weight: bold;
-    }
-
-    /* Hero Section */
-    .services-hero {
-      background-image: url('https://stl.tech/wp-content/uploads/2023/02/Network-services-scaled.webp');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
+    
+    .services-container h1 {
       text-align: center;
-      padding: 20px;
+      margin-bottom: 40px;
+      color: #333;
     }
-
-    .services-hero h1 {
-      font-size: 48px;
-    }
-
-    /* Services Section */
-    .services-section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .services-section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-
+    
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      justify-items: center;
-      padding-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
     }
-
+    
     .service-card {
-      max-width: 300px;
-      border: 1px solid #ddd;
+      background: white;
       border-radius: 10px;
-      padding: 20px;
-      background-color: white;
-      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
+    
     .service-card img {
-      width: 60px;
-      height: 60px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    
+    .service-card h3 {
+      color: #007BFF;
       margin-bottom: 15px;
     }
-
-    .service-card h3 {
-      margin-bottom: 10px;
-      color: #007BFF;
-    }
-
+    
     .service-card p {
-      font-size: 14px;
       color: #555;
+      line-height: 1.6;
     }
-
-    /* Footer */
-    .footer {
-      background-color: #333;
-      color: white;
-      padding: 40px 20px;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .footer-section h3 {
-      margin-bottom: 10px;
-    }
-
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .footer-section ul li {
-      margin: 5px 0;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .social-icons img {
-      width: 24px;
-      height: 24px;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.1);
-    }
-
-    .footer-bottom {
-      text-align: center;
+    
+    .btn-learn {
+      display: inline-block;
       margin-top: 20px;
-      padding-top: 10px;
-      border-top: 1px solid #555;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border-radius: 5px;
     }
-
+    
+    .footer { background-color: #333; color: white; padding: 40px 20px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-section h3 { margin-bottom: 10px; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li { margin: 5px 0; }
+    .social-icons { display: flex; gap: 15px; }
+    .social-icons img { width: 24px; height: 24px; transition: transform 0.3s; }
+    .social-icons img:hover { transform: scale(1.1); }
+    .footer-bottom { text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #555; }
+    
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .user-actions {
-        margin-top: 10px;
-      }
-
-      .services-hero h1 {
-        font-size: 32px;
-      }
+      .navbar { flex-direction: column; align-items: flex-start; }
+      .nav-links { flex-direction: column; gap: 10px; margin-top: 10px; }
+      .user-actions { margin-top: 10px; }
     }
   </style>
 </head>
 <body>
 
 <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">EstateFinder</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="buy.html">Buy</a></li>
-      <li><a href="rent.html">Rent</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
-    <div class="user-actions">
-      <a href="login.html" class="btn-login">Login</a>
-      <a href="post_property.html" class="btn-post">Post Property</a>
+<nav class="navbar">
+  <div class="logo">EstateFinder</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="buy.html">Buy</a></li>
+    <li><a href="rent.html">Rent</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="blog.html">Blog</a></li>
+  </ul>
+  <div class="user-actions">
+    <a href="login.html" class="btn-login">Login</a>
+    <a href="post_property.html" class="btn-post">Post Property</a>
+  </div>
+</nav>
+
+<!-- Services Section -->
+<div class="services-container">
+  <h1>Our Services</h1>
+  
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" alt="Property Valuation">
+      <h3>Property Valuation</h3>
+      <p>Get accurate market valuations for your property from our certified experts to ensure you get the best price.</p>
+      <a href="#" class="btn-learn">Learn More</a>
     </div>
-  </nav>
-
-
-  <!-- Hero Section -->
-  <section class="services-hero">
-    <h1>Professional Real Estate Services</h1>
-  </section>
-
-  <!-- Services -->
-  <section class="services-section">
-    <h2>What We Offer</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/857/857681.png" alt="Buy Property">
-        <h3>Buy Property</h3>
-        <p>Explore thousands of verified listings across India. Find your perfect match with ease.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1246/1246351.png" alt="Rent Property">
-        <h3>Rent Property</h3>
-        <p>Rent residential and commercial properties in top localities with trusted landlords.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2901/2901435.png" alt="Home Loans">
-        <h3>Home Loans</h3>
-        <p>Get personalized home loan offers from leading banks. Fast approval, low interest rates.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3143/3143793.png" alt="Legal Help">
-        <h3>Legal Assistance</h3>
-        <p>Our legal experts help with verification, documentation, and registration support.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Property Management">
-        <h3>Property Management</h3>
-        <p>We manage maintenance, rentals, and tenant issues while you enjoy passive income.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3211/3211563.png" alt="Property Valuation">
-        <h3>Property Valuation</h3>
-        <p>Know the real market worth of your property with expert insights and valuation reports.</p>
-      </div>
+    
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png" alt="Legal Assistance">
+      <h3>Legal Assistance</h3>
+      <p>Our legal experts help with documentation, registration, and all legal formalities for smooth transactions.</p>
+      <a href="#" class="btn-learn">Learn More</a>
     </div>
-  </section>
+    
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1570/1570931.png" alt="Home Loans">
+      <h3>Home Loans</h3>
+      <p>Partnered with leading banks to provide you with the best home loan options at competitive interest rates.</p>
+      <a href="#" class="btn-learn">Learn More</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3022/3022855.png" alt="Interior Design">
+      <h3>Interior Design</h3>
+      <p>Transform your space with our professional interior design services tailored to your style and budget.</p>
+      <a href="#" class="btn-learn">Learn More</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Property Management">
+      <h3>Property Management</h3>
+      <p>Comprehensive property management services for landlords including tenant screening and maintenance.</p>
+      <a href="#" class="btn-learn">Learn More</a>
+    </div>
+    
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Relocation Services">
+      <h3>Relocation Services</h3>
+      <p>Stress-free relocation services including packing, moving, and settling into your new home.</p>
+      <a href="#" class="btn-learn">Learn More</a>
+    </div>
+  </div>
+</div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-          <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Subscribe to Our Newsletter</h3>
-        <form>
-          <input type="email" placeholder="Enter your email">
-          <button type="submit">Subscribe</button>
-        </form>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact_seller.html">Contact Us</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="YouTube"></a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 EstateFinder. All rights reserved.</p>
+    <div class="footer-section">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
-  </footer>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 EstateFinder. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
