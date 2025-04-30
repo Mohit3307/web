@@ -113,37 +113,35 @@
       text-decoration: none;
     }
 
-    .footer {
-      background-color: #333;
-      color: white;
-      padding: 40px 20px;
-      margin-top: 40px;
+  .footer { background-color: #333; color: white; padding: 40px 20px; margin-top: 40px; }
+    .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    .footer-section h3 { margin-bottom: 10px; }
+    .footer-section ul { list-style: none; padding: 0; }
+    .footer-section ul li { margin: 5px 0; }
+    .social-icons { display: flex; gap: 15px; }
+    .social-icons img { width: 24px; height: 24px; transition: transform 0.3s; }
+    .social-icons img:hover { transform: scale(1.1); }
+    .footer-bottom { text-align: center; margin-top: 20px; padding-top: 10px; border-top: 1px solid #555; }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
     }
 
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s;
     }
 
-    .footer-section h3 {
-      margin-bottom: 15px;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      margin: 8px 0;
+    .social-icons img:hover {
+      transform: scale(1.1);
     }
 
     .footer-bottom {
       text-align: center;
-      margin-top: 30px;
-      padding-top: 20px;
+      margin-top: 20px;
+      padding-top: 10px;
       border-top: 1px solid #555;
     }
 
@@ -257,8 +255,7 @@
     <div class="footer-bottom">
       <p>© 2025 EstateFinder. All rights reserved.</p>
     </div>
-  </footer>
-  
+</footer>
 
 </body>
 </html>
